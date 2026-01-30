@@ -1,0 +1,22 @@
+============================================================
+SCALE_C         : 1.0  (c_eff = c / SCALE_C)
+YEARS_LONG      : 100.0
+perihelia used  : 416  (Newton)
+------------------------------------------------------------
+MODEL           : newton
+fit rate        : 0.000000 arcsec/century  (difference vs Newton)
+------------------------------------------------------------
+MODEL           : pn1
+fit rate        : 42.982622 arcsec/century  (difference vs Newton)
+theory 1PN      : 42.982643 arcsec/century  (Einstein 1PN)
+pn1 - theory    : -20.937 microarcsec/century  (indirect-2PN scale check)
+------------------------------------------------------------
+MODEL           : pn2 (Eq.(1) only)
+fit rate        : 0.000002659 arcsec/century  (difference vs Newton)
+theory 2PN(dir) : 0.000002666 arcsec/century  (direct 2PN theory)
+pn2 - theory    : -0.008 microarcsec/century
+------------------------------------------------------------
+MODEL           : pn12 (1PN + Eq.(1))
+fit rate        : 42.982625 arcsec/century  (difference vs Newton)
+pn12 - pn1      : 2.656 microarcsec/century  (direct-2PN scale check)
+============================================================
