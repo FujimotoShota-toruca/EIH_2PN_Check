@@ -61,9 +61,7 @@
 - 共通時刻グリッド：**Newtonモデルの近日点時刻列** `t_grid` を採用  
 - 各モデル：`dense_output=True` により `sol.sol(t_grid)` で同一時刻に補間評価  
 - 近点方向：補間した状態 `(r, v)` から偏心（LRL）ベクトル
-  $$
-  \mathbf e = \frac{\mathbf v \times \mathbf h}{\mu}-\frac{\mathbf r}{r},\quad \mathbf h=\mathbf r\times \mathbf v
-  $$
+  $$\mathbf e = \frac{\mathbf v \times \mathbf h}{\mu}-\frac{\mathbf r}{r},\quad \mathbf h=\mathbf r\times \mathbf v$$
   を計算し、その角度 `atan2(e_y, e_x)` を「近点方向」として採用  
 - `unwrap` で連続化し、差分系列を作成（初期値オフセット除去）
 
@@ -75,17 +73,13 @@
 
 ### 4.1 1PN理論値（Einstein 1PN）
 既知の1PN近日点移動（1軌道あたり）：
-$$
-\Delta\omega = \frac{6\pi\mu}{a(1-e^2)c^2}
-$$
+$$\Delta\omega = \frac{6\pi\mu}{a(1-e^2)c^2}$$
 をケプラー周期から「世紀あたり」へ換算し、`arcsec/century` として比較した。
 
 ### 4.2 direct 2PN理論値（Iorioの式）
 Iorioで与えられる direct 2PN の歳差率
-$$
-\dot{\omega}^{(2\mathrm{PN})}_{\mathrm{dir}}
-= n_b\frac{\mu^2(28-e^2)}{4c^4a^2(1-e^2)^2}
-$$
+$$\dot{\omega}^{(2\mathrm{PN})}_{\mathrm{dir}}
+= n_b\frac{\mu^2(28-e^2)}{4c^4a^2(1-e^2)^2}$$
 を `arcsec/century` に換算して比較した。
 
 ---
