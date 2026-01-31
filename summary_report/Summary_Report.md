@@ -4,6 +4,8 @@
 太陽—水星の2体問題に対し、ニュートン重力（Newton）、一般相対論1次補正（1PN）、および2PN direct項（Iorio 2020 の式(1)に基づく加速度）を実装し、**近日点移動（perihelion precession）**が理論・文献の期待と整合することを確認した。  
 結果として、Newtonでは近日点移動は 0、1PNでは **≈ 42.9826 arcsec/century** と理論値 **≈ 42.9826 arcsec/century** に一致、2PN direct項は **≈ 2.66 μas/century** のオーダで再現された。さらに、合成モデル差分 **(pn12 − pn1)** が **(pn2 − newton)** と一致することから、モデル加算構造の自己整合を確認した。
 
+> **参考/引用** : [Lorenzo Iorio：Revisiting the 2PN Pericenter Precession in View of Possible Future Measurements, Universe, 6, 4, 53, 2020.（doi: 10.3390/universe6040053）](https://www.mdpi.com/2218-1997/6/4/53)
+
 ---
 
 ## 1. 背景と目的
